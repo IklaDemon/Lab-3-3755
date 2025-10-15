@@ -2,7 +2,14 @@
 
 # Compilation
 
-run the makefile (only for windows at the moment)
+run the makefile for Windows
+
+```bash
+make
+make runw
+```
+
+run the makefile for Linux
 
 ```bash
 make
