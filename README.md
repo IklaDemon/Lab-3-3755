@@ -32,14 +32,14 @@ But under the table at his feet lay Bimbo, who ate everything indiscriminately.<
 *Bimbo should be a dog*<br>
 The kid unrolled the cabbage roll, crumpled the cabbage leaf and quietly threw it on the floor for Bimbo.<br>
 
-**Members of the family:**_
+**Members of the family:**<br>
 
-**The Kid (Karlsson) (Person)**_
-**Mom (Person)**_
-**Dad (Person)**_
-**Bosse (maybe a brother) (Person)**_
-**Bethan (maybe a brother) (Person)**_
-**Bimbo (Dog)**_
+**The Kid (Karlsson) (Person)**<br>
+**Mom (Person)**<br>
+**Dad (Person)**<br>
+**Bosse (maybe a brother) (Person)**<br>
+**Bethan (maybe a brother) (Person)**<br>
+**Bimbo (Dog)**<br>
 
 # Compilation
 
