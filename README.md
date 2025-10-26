@@ -20,7 +20,7 @@ In English
 And he simply kept silent about the fact that he had returned from the roof just a few minutes ago.<br>
 Of course, Mom was very smart and understood almost everything, but whether she would understand that he absolutely had to climb onto the roof - of that the Kid was still not sure.<br>
 So he decided to say nothing about Karlsson's appearance.<br>
-*Karlsson should be "the kid", talking about himself in third person*<br>
+*Karlsson and "the kid" are two different poeple*<br>
 In any case, not now.<br>
 In any case, not before the whole family gathered.<br>
 He would present this luxurious surprise at dinner.<br>
@@ -34,12 +34,19 @@ The kid unrolled the cabbage roll, crumpled the cabbage leaf and quietly threw i
 
 **Members of the family:**<br>
 
-**The Kid (Karlsson) (Person)**<br>
+**The Kid (Person)**<br>
+**Karlsson (Person)**<br>
 **Mom (Person)**<br>
 **Dad (Person)**<br>
 **Bosse (maybe a brother) (Person)**<br>
 **Bethan (maybe a brother) (Person)**<br>
 **Bimbo (Dog)**<br>
+
+**Enviroments:**<br>
+
+**Roof**<br>
+**Dining Room**<br>
+****<br>
 
 # Compilation
 
