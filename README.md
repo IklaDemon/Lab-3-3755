@@ -47,12 +47,12 @@ The kid unrolled the cabbage roll, crumpled the cabbage leaf and quietly threw i
 **Roof (Location)**<br>
 **Dining Room (Location)**<br>
 
-**Objects**<br>
+**Objects:**<br>
 
 **Table**<br>
 **Meals**<br>
 
-**Actions**<br>
+**Actions:**<br>
 
 **Some people move from one place to another**<br>
 **Some people change their mood (from normal to worried/suspicious)**<br>
