@@ -18,7 +18,7 @@
 In English
 
 And he simply kept silent about the fact that he had returned from the roof just a few minutes ago.<br>
-Of course, Mom was very smart and understood almost everything, but whether she would understand that he absolutely had to climb onto the roof - of that the Kid was still not sure.<br>
+Of course, Mom was very smart and understood almost everything, but whether she would understand that he absolutely had to climb onto the roof - of that "the Kid" was still not sure.<br>
 So he decided to say nothing about Karlsson's appearance.<br>
 *Karlsson and "the kid" are two different poeple*<br>
 In any case, not now.<br>
@@ -44,9 +44,18 @@ The kid unrolled the cabbage roll, crumpled the cabbage leaf and quietly threw i
 
 **Enviroments:**<br>
 
-**Roof**<br>
-**Dining Room**<br>
-****<br>
+**Roof (Location)**<br>
+**Dining Room (Location)**<br>
+
+**Objects**<br>
+
+**Table**<br>
+**Meals**<br>
+
+**Actions**<br>
+
+**Some people move from one place to another**<br>
+**Some people change their mood (from normal to worried/suspicious)**<br>
 
 # Compilation
 
