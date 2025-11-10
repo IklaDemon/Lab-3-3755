@@ -1,12 +1,13 @@
-import Classes.Bimbo;
-import Classes.Karlsson;
-import Classes.Location;
-import Classes.TheKid;
+package ru.itmo.ale;
 
-public final class Main
-{
-    public static void main(String[] args)
-    {
+import ru.itmo.ale.Classes.*;
+
+/**
+ * Hello world!
+ */
+public class App {
+    public static void main(String[] args) {
+        System.out.println("Porco Dio");
         // create location
         Location location = new Location("Roof");
 

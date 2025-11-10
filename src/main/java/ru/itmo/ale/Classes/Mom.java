@@ -1,6 +1,6 @@
-package Classes;
+package ru.itmo.ale.Classes;
 
-import Enums.Emotion;
+import ru.itmo.ale.Enums.Emotion;
 
 public class Mom extends Person
 {

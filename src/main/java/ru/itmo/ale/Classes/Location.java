@@ -1,4 +1,4 @@
-package Classes;
+package ru.itmo.ale.Classes;
 
 import java.util.ArrayList;
 

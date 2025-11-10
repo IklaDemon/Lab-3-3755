@@ -60,9 +60,9 @@ The kid unrolled the cabbage roll, crumpled the cabbage leaf and quietly threw i
 **Scene:**<br>
 1. Karlsson moveTo() the Roof (Or not).<br>
 2. TheKid climbTo() the Roof.<br>
-3. TheKid moveTo() diningRoom and Mom changes mood.<br>
+3. TheKid moveTo() table and Mom changes mood.<br>
 4. TheKid thinks("Why mother looks sad").<br>
-5. The whole family gathers in the dining room.<br>
+5. The whole family gathers in the table.<br>
 6. Mom serves Meal (maybe veggies or maybe trash food).<br>
 7. TheKid (Depending on the type of food) throwUnderTable(Meal) (or not) underTable.<br>
 8. Bimbo eats (or not) the Meal -> mood changes accordingly (Happy/sad).<br>
@@ -75,24 +75,14 @@ The kid unrolled the cabbage roll, crumpled the cabbage leaf and quietly threw i
 3. Малыш выполняет moveTo() в столовую, и настроение мамы изменяется.<br>
 4. Малыш выполняет thinks("Почему мама выглядит грустной").<br>
 5. Вся семья собирается в столовой.<br>
-6. Мама выполняет serve(Meal) (возможно, полезная еда, а возможно — вредная).<br>
+6. Мама выполняет (возможно, полезная еда, а возможно — вредная).<br>
 7. Малыш, в зависимости от типа еды, выполняет throwUnderTable(Meal) (или нет) — бросает еду под стол.<br>
-8. Бимбо ест (или нет) еду → настроение меняется соответственно (радость/грусть).<br>
-9. Малыш выполняет speaks("Я забрался на крышу") (или нет) → настроение всей семьи изменяется соответственно.<br>
+
 
 
 # Compilation
 
-run the makefile for Windows
-
 ```bash
-make
-make runw
-```
-
-run the makefile for Linux
-
-```bash
-make
-make run
+mvn package
+java -cp target/code-1.0-SNAPSHOT.jar ru.itmo.ale.App
 ```

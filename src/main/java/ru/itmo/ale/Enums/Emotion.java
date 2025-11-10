@@ -1,4 +1,4 @@
-package Enums;
+package ru.itmo.ale.Enums;
 
 public enum Emotion
 {
