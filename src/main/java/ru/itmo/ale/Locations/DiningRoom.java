@@ -1,22 +1,61 @@
 package ru.itmo.ale.Locations;
 
+import java.util.Objects;
+
 import ru.itmo.ale.Objects.Table;
+import ru.itmo.ale.Objects.UnderTable;
 
 //import ru.itmo.ale.Classes.Location;
 
-public class DiningRoom extends Location
+public final class DiningRoom extends Location
 {
     protected Table table;
+    protected UnderTable underTable;
 
+    /*
+     * constructor
+     */
     public DiningRoom ()
     {
         super ("Dining Room");
-        table = new Table();
+        this.table = new Table();
+        this.underTable = new UnderTable();
     }
 
+    /*
+     * getter table
+     */
+    public Table getTable() {
+        return table;
+    }
+
+    /*
+     * getter underTable
+     */
+    public UnderTable getUnderTable() {
+        return underTable;
+    }
+
+    /*
+     * to string
+     */
     @Override
     public String toString()
     {
-        return super.toString();
+        String res = super.toString();
+        res += "\n" + this.table.toString();
+        res += "\n" + this.underTable.toString();
+        return res;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        DiningRoom dr = (DiningRoom) obj;
+        return super.equals(obj) && table.equals(dr.table) && underTable.equals(dr.underTable);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), this.table, this.underTable);
     }
 }

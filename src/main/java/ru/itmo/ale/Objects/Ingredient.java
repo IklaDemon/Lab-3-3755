@@ -2,11 +2,24 @@ package ru.itmo.ale.Objects;
 
 public class Ingredient extends Object
 {
-    protected boolean isExpired;
-
-    public Ingredient (String name, boolean isExpired)
+    public Ingredient (String name)
     {
         super(name);
-        this.isExpired = isExpired;
+    }
+
+    @Override
+    public String toString ()
+    {
+        return "Name of the ingredient: " + this.name;
+    }
+
+    @Override
+    public boolean equals(java.lang.Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 }

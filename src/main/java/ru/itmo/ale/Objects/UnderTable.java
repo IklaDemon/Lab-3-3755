@@ -5,14 +5,14 @@ import java.util.Objects;
 
 import ru.itmo.ale.Exceptions.NoFoodException;
 
-public class Table extends Object
+public class UnderTable extends Object
 {
     protected ArrayList<Meal> meals;
 
-    public Table ()
+    public UnderTable ()
     {
-        super("Table");
-        meals = new ArrayList<Meal>();
+        super ("Under Table");
+        this.meals = new ArrayList<Meal>();
     }
 
     public ArrayList<Meal> getMeals ()
@@ -36,6 +36,26 @@ public class Table extends Object
         meals.remove(m);
     }
 
+    /*
+     * method to empty the meals list
+     */
+    public void removeAll ()
+    {
+        this.meals.clear();
+    }
+
+    /*
+     * method to check if some food is present under the
+     * table
+     */
+    public boolean isMealPresent ()
+    {
+        return (meals.size() > 0) ? true : false;
+    }
+
+    /*
+     * to string
+     */
     @Override
     public String toString ()
     {

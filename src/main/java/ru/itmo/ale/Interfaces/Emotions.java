@@ -6,7 +6,8 @@ public interface Emotions
 {
     /*
      * set the mood of a character.
-     * the String "reason" is present only to print something, a reason...
+     * the String "reason" is present only to print
+     * something, a reason...
      */
     public void setMood (Emotion emotion, String reason);
 
@@ -16,7 +17,8 @@ public interface Emotions
     public Emotion getMood ();
 
     /*
-     * if the character is sad, then it should also appear the crease
+     * if the character is sad, then it should also appear
+     * the crease
      */
     public void setCrease ();
 }

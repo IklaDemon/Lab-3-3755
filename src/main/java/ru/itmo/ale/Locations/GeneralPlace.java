@@ -1,12 +1,14 @@
-package ru.itmo.ale.Characters;
+/*
+ * this is the general locatio where people will be when
+ * their position is not clear
+ */
+package ru.itmo.ale.Locations;
 
-import ru.itmo.ale.Locations.Location;
-
-public final class Bosse extends Person
+public final class GeneralPlace extends Location
 {
-    public Bosse (Location l)
+    public GeneralPlace()
     {
-        super ("Bosse", l);
+        super ("General Place");
     }
 
     @Override
@@ -25,4 +27,3 @@ public final class Bosse extends Person
         return super.hashCode();
     }
 }
-
