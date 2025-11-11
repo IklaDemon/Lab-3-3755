@@ -5,5 +5,6 @@ public enum Emotion
     NORMAL,
     HAPPY,
     SUSPICIOUS,
-    ANGRY;
+    ANGRY,
+    SAD;
 }

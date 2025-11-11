@@ -1,6 +1,8 @@
-package ru.itmo.ale.Classes;
+package ru.itmo.ale.Locations;
 
 import java.util.ArrayList;
+
+import ru.itmo.ale.Characters.Character;
 
 public class Location
 {
@@ -26,6 +28,10 @@ public class Location
     public Character getCharacter (Character c)
     {
         return this.characters.get(characters.indexOf(c));
+    }
+
+    public String getName() {
+        return name;
     }
 
     public String toString() {

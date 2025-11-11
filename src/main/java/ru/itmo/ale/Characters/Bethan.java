@@ -1,4 +1,4 @@
-package ru.itmo.ale.Classes;
+package ru.itmo.ale.Characters;
 
 import ru.itmo.ale.Enums.Emotion;
 
@@ -6,8 +6,7 @@ public class Bethan extends Person
 {
     public Bethan ()
     {
-        //super ("Bethan", Emotion.NORMAL);
-        super ("Bethan", Emotion.ANGRY);
+        super ("Bethan", Emotion.ANGRY, false, null);
     }
 
     @Override

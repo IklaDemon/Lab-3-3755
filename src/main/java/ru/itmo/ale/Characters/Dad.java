@@ -1,12 +1,12 @@
-package ru.itmo.ale.Classes;
+package ru.itmo.ale.Characters;
 
 import ru.itmo.ale.Enums.Emotion;
 
-public class Bosse extends Person
+public class Dad extends Person
 {
-    public Bosse ()
+    public Dad ()
     {
-        super ("Bosse", Emotion.NORMAL);
+        super ("Dad", Emotion.NORMAL, false, null);
     }
 
     @Override
@@ -15,4 +15,3 @@ public class Bosse extends Person
         return super.toString();
     }
 }
-
