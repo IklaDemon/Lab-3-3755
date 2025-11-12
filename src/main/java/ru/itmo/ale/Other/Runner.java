@@ -162,7 +162,6 @@ public class Runner
             actors.bimbo().setMood(Emotion.SAD, "He didn't eat ");
         }
 
-
         logger.close();
     }    
 }

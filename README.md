@@ -32,53 +32,27 @@ But under the table at his feet lay Bimbo, who ate everything indiscriminately.<
 *Bimbo should be a dog*<br>
 The kid unrolled the cabbage roll, crumpled the cabbage leaf and quietly threw it on the floor for Bimbo.<br>
 
-**Members of the family:**<br>
-
-**The Kid (Person)**<br>
-**Karlsson (Person)**<br>
-**Mom (Person)**<br>
-**Dad (Person)**<br>
-**Bosse (maybe a brother) (Person)**<br>
-**Bethan (maybe a brother) (Person)**<br>
-**Bimbo (Dog)**<br>
-
-**Enviroments:**<br>
-
-**Roof (Location)**<br>
-**Dining Room (Location)**<br>
-
-**Objects:**<br>
-
-**Table**<br>
-**Meals**<br>
-
-**Actions:**<br>
-
-**Some people move from one place to another**<br>
-**Some people change their mood (from normal to worried/suspicious)**<br>
-
 **Scene:**<br>
-1. Karlsson moveTo() the Roof (Or not).<br>
-2. TheKid climbTo() the Roof.<br>
-3. TheKid moveTo() table and Mom changes mood.<br>
-4. TheKid thinks("Why mother looks sad").<br>
+1. Everyone appears in their respective place.<br>
+2. TheKid moves to the GeneralPlace.<br>
+3. TheKid thinks decides to tell the secret or not.<br>
+4. Mom reacts based on that.<br>
 5. The whole family gathers in the table.<br>
-6. Mom serves Meal (maybe veggies or maybe trash food).<br>
-7. TheKid (Depending on the type of food) throwUnderTable(Meal) (or not) underTable.<br>
+6. Food appears in the table(maybe veggies or maybe trash food).<br>
+7. TheKid (Depending on the type of food) throwUnderTable(Meal) (or not) underTable and if he likes the food he will tell the secret.<br>
 8. Bimbo eats (or not) the Meal -> mood changes accordingly (Happy/sad).<br>
-9. TheKid speaks("I climbed to the roof") (or not) -> whole family will change mood accordingly.<br>
 
 **Translation to Russian:**<br>
 
-1. Карлсон выполняет moveTo() на крышу (или нет).<br>
-2. Малыш выполняет climbTo() на крышу.<br>
-3. Малыш выполняет moveTo() в столовую, и настроение мамы изменяется.<br>
-4. Малыш выполняет thinks("Почему мама выглядит грустной").<br>
-5. Вся семья собирается в столовой.<br>
-6. Мама выполняет (возможно, полезная еда, а возможно — вредная).<br>
-7. Малыш, в зависимости от типа еды, выполняет throwUnderTable(Meal) (или нет) — бросает еду под стол.<br>
-
-
+**Сцена:**<br>
+1. Все занимают свои места.<br>
+2. Ребёнок перемещается в Главное Место.<br>
+3. Ребёнок размышляет и решает, рассказывать ему секрет или нет.<br>
+4. Мама реагирует в зависимости от этого.<br>
+5. Вся семья собирается за столом.<br>
+6. На столе появляется еда (может быть, овощи, а может быть, и мусор).<br>
+7. Ребёнок (в зависимости от типа еды) бросает (или не бросает) под стол еду, и если еда ему нравится, он рассказывает секрет.<br>
+8. Малыш ест (или не ест) еду -> настроение меняется соответственно (веселое/грустное).<br>
 
 # Compilation
 
