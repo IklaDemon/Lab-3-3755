@@ -125,8 +125,13 @@ public abstract class Character implements Emotions, Eater
         return this.hasCrease == character.hasCrease && Objects.equals(this.name, character.name) && this.currentLocation.equals(character.currentLocation) && this.mood == character.mood;
     }
 
-    @Override
+    /*@Override
     public int hashCode() {
         return Objects.hash(this.currentLocation, this.hasCrease, this.mood, this.name);
+    }*/
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.hasCrease, this.name, this.currentLocation, this.mood);
     }
 }
