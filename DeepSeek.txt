@@ -120,3 +120,25 @@ public abstract class Character implements Emotions, Eater {
         return Objects.hash(name, mood, hasCrease, currentLocation);
     }
 }
+
+
+1. Immutabilità e sicurezza
+Rimosso il setter per name: Il nome di un personaggio dovrebbe essere immutabile dopo la creazione
+Aggiunti controlli di null: Objects.requireNonNull() per parametri critici
+Campi private: Incapsulamento migliore rispetto a protected
+2. Miglioramenti della logica
+Corretto il metodo eats(): Ora restituisce false quando non può mangiare (prima restituiva sempre true)
+Refactoring del casting: Variabile locale esplicita per DiningRoom invece di casting ripetuto
+Corretto typo: divideCabaggeRoll → divideCabbageRoll
+3. Miglioramenti del codice
+Costanti per stringhe: Eliminazione di magic strings
+Formattazione migliorata: String.format() in toString()
+Logica semplificata: Rimozione di condizioni ridondanti
+Getter aggiuntivi: Per hasCrease e currentLocation
+4. Miglioramenti delle prestazioni
+HashCode ottimizzato: Ordine coerente con equals()
+Minore ripetizione di codice
+5. Miglioramenti della manutenibilità
+Nomi parametri più chiari: l → location, c → cabbageRoll
+Struttura più coerente: Ordine logico dei metodi
+Documentazione implicita: Codice più auto-esplicativo

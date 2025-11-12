@@ -55,7 +55,7 @@ public abstract class Character implements Emotions, Eater
         else
         {
             System.out.println(this.name + " can't eat because he is not in the Dining room ");
-            return true;
+            return false;
         }
 
     }
