@@ -4,7 +4,7 @@ import java.io.PrintStream;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Logger extends PrintStream
+    public class Logger extends PrintStream
 {
     private PrintStream console;
     private FileWriter fileWriter;

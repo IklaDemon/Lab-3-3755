@@ -8,7 +8,7 @@ import ru.itmo.ale.Locations.Location;
 
 public final class TheKid extends Person
 {
-    public boolean saidSecret;
+    protected boolean saidSecret;
 
     public TheKid (Location l)
     {

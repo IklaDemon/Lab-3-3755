@@ -17,6 +17,7 @@ import ru.itmo.ale.Objects.CabbageRoll;
 import ru.itmo.ale.Objects.Hamburger;
 import ru.itmo.ale.Objects.Meal;
 import ru.itmo.ale.Characters.Dad;
+import ru.itmo.ale.Characters.Karlsson;
 import ru.itmo.ale.Characters.Bosse;
 import ru.itmo.ale.Characters.Mom;
 
@@ -52,36 +53,36 @@ public class Runner
         Roof r = new Roof ();
 
         // characters
-        TheKid theKid = new TheKid (r);
+        Actors actors = new Actors(new TheKid(r), new Karlsson(r), new Mom(r), new Dad(r), new Bosse(r), new Bethan(r), new Bimbo(r));
+        /*TheKid theKid = new TheKid (r);
         //Karlsson karlsson = new Karlsson (gp);
         Mom mom = new Mom (gp);
         Dad dad = new Dad (gp);
         Bosse bosse = new Bosse (gp);
-        Bethan Bethan = new Bethan (gp);
-
-        Bimbo goodBoy = new Bimbo (gp);
+        Bethan bethan = new Bethan (gp);
+        Bimbo goodBoy = new Bimbo (gp);*/
 
         /*
          * start of the story
          */
 
-        theKid.moveTo(gp);
-        theKid.thinks("I will stay quite");
-        mom.thinks("I wont say anything about my kid coming from the roof");
-        theKid.thinks("I absolutely had to be in that roof");
+        actors.theKid().moveTo(gp);
+        actors.theKid().thinks("I will stay quite");
+        actors.mom().thinks("I wont say anything about my kid coming from the roof");
+        actors.theKid().thinks("I absolutely had to be in that roof");
         scr.nextLine();
 
         // nextInt will generate integers from: [0; 10)
         if (random_generator.nextInt(10) < 5)
         {
-            theKid.thinks("I won't say anything about karlsson appareance in the roof before the family gathers");
-            mom.setMood(Emotion.SAD, "The Kid is hiding something");
+            actors.theKid().thinks("I won't say anything about karlsson appareance in the roof before the family gathers");
+            actors.mom().setMood(Emotion.SAD, "The Kid is hiding something");
         }
         else
         {
-            theKid.thinks("I will tell her the secret");
-            theKid.tellSecret();
-            mom.setMood(Emotion.NORMAL, "The Kid was honest");
+            actors.theKid().thinks("I will tell her the secret");
+            actors.theKid().tellSecret();
+            actors.mom().setMood(Emotion.NORMAL, "The Kid was honest");
         }
         scr.nextLine();
 
@@ -106,15 +107,15 @@ public class Runner
             dr.getTable().addMeal(new CabbageRoll());
         }
 
-        mom.speaks("Everyone!, is time to eat!");
+        actors.mom().speaks("Everyone!, is time to eat!");
         scr.nextLine();
 
-        mom.seatsToTable(dr);
-        dad.seatsToTable(dr);
-        bosse.seatsToTable(dr);
-        Bethan.seatsToTable(dr);
-        theKid.seatsToTable(dr);
-        goodBoy.moveTo(dr);
+        actors.mom().seatsToTable(dr);
+        actors.dad().seatsToTable(dr);
+        actors.bosse().seatsToTable(dr);
+        actors.bethan().seatsToTable(dr);
+        actors.theKid().seatsToTable(dr);
+        actors.bimbo().moveTo(dr);
         scr.nextLine();
 
         try
@@ -129,15 +130,15 @@ public class Runner
 
         try
         {
-            if (theKid.eats(dr.getTable().getMeal()))
+            if (actors.theKid().eats(dr.getTable().getMeal()))
             {
-                if (theKid.tellSecret())
+                if (actors.theKid().tellSecret())
                 {
-                    mom.setMood(Emotion.ANGRY, "The kid was honest too late");
-                    dad.setMood(Emotion.ANGRY, "The kid did something irresponsible for his safety");
-                    bosse.setMood(Emotion.NORMAL, "Bosse does not care");
-                    Bethan.setMood(Emotion.NORMAL, "Bosse does not care");
-                    theKid.setMood(Emotion.SAD, "everyone is asngry at him");
+                    actors.mom().setMood(Emotion.ANGRY, "The kid was honest too late");
+                    actors.dad().setMood(Emotion.ANGRY, "The kid did something irresponsible for his safety");
+                    actors.bosse().setMood(Emotion.NORMAL, "Bosse does not care");
+                    actors.bethan().setMood(Emotion.NORMAL, "Bosse does not care");
+                    actors.theKid().setMood(Emotion.SAD, "everyone is asngry at him");
                 }
             }
         }
@@ -150,15 +151,15 @@ public class Runner
         try
         {
             Meal m = dr.getUnderTable().getMeal();
-            if (goodBoy.eats(m))
+            if (actors.bimbo().eats(m))
             {
-                goodBoy.setMood(Emotion.HAPPY, "He ate " + m.getName());
+                actors.bimbo().setMood(Emotion.HAPPY, "He ate " + m.getName());
             }
         }
         catch (NoFoodException e)
         {
             System.out.println(e.getMessage());
-            goodBoy.setMood(Emotion.SAD, "He didn't eat ");
+            actors.bimbo().setMood(Emotion.SAD, "He didn't eat ");
         }
 
 

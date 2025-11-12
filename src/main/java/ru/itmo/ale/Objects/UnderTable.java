@@ -27,7 +27,7 @@ public class UnderTable extends Object
 
     public Meal getMeal () throws NoFoodException
     {
-        if (meals.isEmpty()) throw new NoFoodException("No food in the table");
+        if (meals.isEmpty()) throw new NoFoodException("No food under the table");
         return meals.get(0);
     }
 
