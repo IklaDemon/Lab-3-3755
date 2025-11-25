@@ -17,7 +17,9 @@ public final class TheKid extends Person
     }
 
     /*
-     * fancy "move to" (not very fancy if you have to climb)
+     * fancy "move to", but it's not used because in
+     * the story is not wwritten that the kid is
+     * climbing in the roof
      */
     public void climbTo (Roof r)
     {
@@ -65,8 +67,8 @@ public final class TheKid extends Person
     }
 
     /*
-     * method to throw food nuder the table, the method "eats ()" if the food is not of the linking of the kid,
-     * will automatically call this method
+     * method to throw food nuder the table, if the food is not of the liking of the kid,
+     * the method "eats ()" will automatically call this method
      */
     public void throwUnderTable (Meal meal)
     {

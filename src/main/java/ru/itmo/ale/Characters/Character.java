@@ -25,7 +25,7 @@ public abstract class Character implements Emotions, Eater
         this.name = name;
         this.mood = Emotion.NORMAL;
         this.hasCrease = false;
-        this.currentLocation = l;
+        this.currentLocation = Objects.requireNonNull(l, "Location can't be null");
         l.addCharacter(this);
     }
 
@@ -101,7 +101,7 @@ public abstract class Character implements Emotions, Eater
                     System.out.println("A crease has appeared in " + this.name);
                     break;
                 default:
-                    System.out.println("The crease dissapeared in " + this.name);
+                    System.out.println("The crease disapeared in " + this.name);
                     this.hasCrease = false;
                     break;
             }

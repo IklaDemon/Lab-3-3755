@@ -136,6 +136,8 @@ public abstract class Character implements Emotions, Eater {
 }
 
 cosa ho migliorato (e perché)
+What did I improve and why
+
 Null-safety e validazioni: uso Objects.requireNonNull in punti chiave (costruttore, setter, metodi pubblici) per evitare NPE “silenziosi”.
 Incapsulamento: i campi sono private. Espongo getter/setter dove serve e un protected setCurrentLocation utile alle sottoclassi in moveTo.
 Ritorni coerenti: in eats ora il return è informativo: true solo se il Meal è effettivamente rimosso dal tavolo. Nel ramo “non sono in sala da pranzo” ritorna false (prima ritornava true, bug logico).

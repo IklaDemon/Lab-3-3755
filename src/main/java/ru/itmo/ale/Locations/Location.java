@@ -26,9 +26,9 @@ public abstract class Location
         this.characters.remove(c);
     }
 
-    public Character getCharacter (Character c)
+    public ArrayList<Character> getCharacters ()
     {
-        return this.characters.get(characters.indexOf(c));
+        return characters;
     }
 
     public String getName() {

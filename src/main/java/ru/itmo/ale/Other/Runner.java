@@ -67,6 +67,7 @@ public class Runner
         scr.nextLine();
 
         // nextInt will generate integers from: [0; 10)
+        // 50% chance of the Kid telling the secret
         if (random_generator.nextInt(10) < 5)
         {
             actors.theKid().thinks("I won't say anything about karlsson appareance in the roof before the family gathers");
@@ -84,6 +85,7 @@ public class Runner
         scr.nextLine();
 
         // nextInt will generate integers from: [0; 10)
+        // 50% chance of the food being Hamburger or Cabbage Roll
         if (random_generator.nextInt(10) < 5)
         {
             dr.getTable().addMealOnTheTable(new Hamburger());
@@ -131,8 +133,8 @@ public class Runner
                     actors.mom().setMood(Emotion.ANGRY, "The kid was honest too late");
                     actors.dad().setMood(Emotion.ANGRY, "The kid did something irresponsible for his safety");
                     actors.bosse().setMood(Emotion.NORMAL, "Bosse does not care");
-                    actors.bethan().setMood(Emotion.NORMAL, "Bosse does not care");
-                    actors.theKid().setMood(Emotion.SAD, "everyone is asngry at him");
+                    actors.bethan().setMood(Emotion.NORMAL, "Bethan does not care");
+                    actors.theKid().setMood(Emotion.SAD, "everyone is angry at him");
                 }
             }
         }
@@ -144,7 +146,7 @@ public class Runner
 
         try
         {
-            Meal m = dr.getTable().getMealUndertTheTable();
+            Meal m = dr.getTable().getMealUnderTheTable();
             if (actors.bimbo().eats(m))
             {
                 actors.bimbo().setMood(Emotion.HAPPY, "He ate " + m.getName());

@@ -17,6 +17,9 @@ public class Table extends Object
         this.mealsUnderTheTable = new ArrayList<Meal>();
     }
 
+    public ArrayList<Meal> getMealsOnTheTable () { return mealsOnTheTable; }
+    public ArrayList<Meal> getMealsUnderTheTable () { return mealsUnderTheTable; }
+
     public void addMealOnTheTable (Meal m)
     {
         mealsOnTheTable.add(m);
@@ -33,7 +36,7 @@ public class Table extends Object
         return mealsOnTheTable.get(0);
     }
 
-    public Meal getMealUndertTheTable () throws NoFoodException
+    public Meal getMealUnderTheTable () throws NoFoodException
     {
         if (mealsUnderTheTable.isEmpty()) throw new NoFoodException("No food under the table");
         return mealsUnderTheTable.get(0);
