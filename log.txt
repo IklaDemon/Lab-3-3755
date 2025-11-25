@@ -1,0 +1,29 @@
+Hello
+Hello
+Hello
+Hello
+The Kid walks to General Place
+The Kid thinks: I will stay quite
+Mom thinks: I wont say anything about my kid coming from the roof
+The Kid thinks: I absolutely had to be in that roof
+The Kid thinks: I will tell her the secret
+The Kid says: I was in the roof with Karlsson
+Mom changes to NORMAL because The Kid was honest
+The crease disapeared in Mom
+Family is assembled
+Mom says: Everyone!, is time to eat!
+Mom walks to Dining Room
+Mom sat in the table
+Dad walks to Dining Room
+Dad sat in the table
+Bosse walks to Dining Room
+Bosse sat in the table
+Bethan walks to Dining Room
+Bethan sat in the table
+The Kid walks to Dining Room
+The Kid sat in the table
+Bimbo runs to Dining Room
+For dinner there was: Hamburger
+The Kid likes Hamburger
+No food under the table [Overrided method]
+Bimbo changes to SAD because He didn't eat 

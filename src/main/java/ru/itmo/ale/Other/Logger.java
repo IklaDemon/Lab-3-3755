@@ -37,7 +37,7 @@ import java.io.IOException;
         }
         catch (IOException e)
         {
-            System.out.println(e.getMessage());
+            throw new RuntimeException("Error writing to log file", e);
         }
     }
 
