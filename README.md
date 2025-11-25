@@ -20,7 +20,6 @@ In English
 And he simply kept silent about the fact that he had returned from the roof just a few minutes ago.<br>
 Of course, Mom was very smart and understood almost everything, but whether she would understand that he absolutely had to climb onto the roof - of that "the Kid" was still not sure.<br>
 So he decided to say nothing about Karlsson's appearance.<br>
-*Karlsson and "the kid" are two different poeple*<br>
 In any case, not now.<br>
 In any case, not before the whole family gathered.<br>
 He would present this luxurious surprise at dinner.<br>
@@ -29,7 +28,6 @@ A crease had appeared on her forehead, between her eyebrows, where it shouldn't 
 Finally, the whole family was assembled, and then Mom called everyone to dinner; everyone sat down at the table together: Mom, Dad, Bosse, Bethan, and the Kid.<br>
 For dinner there were cabbage rolls - cabbage again! And the Kid only liked things that were unhealthy.<br>
 But under the table at his feet lay Bimbo, who ate everything indiscriminately.<br>
-*Bimbo should be a dog*<br>
 The kid unrolled the cabbage roll, crumpled the cabbage leaf and quietly threw it on the floor for Bimbo.<br>
 
 **Scene:**<br>
