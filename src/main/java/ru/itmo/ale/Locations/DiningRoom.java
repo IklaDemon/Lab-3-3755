@@ -3,14 +3,12 @@ package ru.itmo.ale.Locations;
 import java.util.Objects;
 
 import ru.itmo.ale.Objects.Table;
-import ru.itmo.ale.Objects.UnderTable;
 
 //import ru.itmo.ale.Classes.Location;
 
 public final class DiningRoom extends Location
 {
     protected Table table;
-    protected UnderTable underTable;
 
     /*
      * constructor
@@ -19,7 +17,6 @@ public final class DiningRoom extends Location
     {
         super ("Dining Room");
         this.table = new Table();
-        this.underTable = new UnderTable();
     }
 
     /*
@@ -30,13 +27,6 @@ public final class DiningRoom extends Location
     }
 
     /*
-     * getter underTable
-     */
-    public UnderTable getUnderTable() {
-        return underTable;
-    }
-
-    /*
      * to string
      */
     @Override
@@ -44,18 +34,17 @@ public final class DiningRoom extends Location
     {
         String res = super.toString();
         res += "\n" + this.table.toString();
-        res += "\n" + this.underTable.toString();
         return res;
     }
 
     @Override
     public boolean equals(Object obj) {
         DiningRoom dr = (DiningRoom) obj;
-        return super.equals(obj) && table.equals(dr.table) && underTable.equals(dr.underTable);
+        return super.equals(obj) && table.equals(dr.table);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), this.table, this.underTable);
+        return Objects.hash(super.hashCode(), this.table);
     }
 }

@@ -7,55 +7,96 @@ import ru.itmo.ale.Exceptions.NoFoodException;
 
 public class Table extends Object
 {
-    protected ArrayList<Meal> meals;
+    protected ArrayList<Meal> mealsOnTheTable;
+    protected ArrayList<Meal> mealsUnderTheTable;
 
     public Table ()
     {
         super("Table");
-        meals = new ArrayList<Meal>();
+        this.mealsOnTheTable = new ArrayList<Meal>();
+        this.mealsUnderTheTable = new ArrayList<Meal>();
     }
 
-    public ArrayList<Meal> getMeals ()
+    public void addMealOnTheTable (Meal m)
     {
-        return meals;
+        mealsOnTheTable.add(m);
     }
 
-    public void addMeal (Meal m)
+    public void addMealUnderTheTable (Meal m)
     {
-        meals.add(m);
+        mealsUnderTheTable.add(m);
     }
 
-    public Meal getMeal () throws NoFoodException
+    public Meal getMealOnTheTable () throws NoFoodException
     {
-        if (meals.isEmpty()) throw new NoFoodException("No food in the table");
-        return meals.get(0);
+        if (mealsOnTheTable.isEmpty()) throw new NoFoodException("No food on the table");
+        return mealsOnTheTable.get(0);
     }
 
-    public void removeMeal (Meal m)
+    public Meal getMealUndertTheTable () throws NoFoodException
     {
-        meals.remove(m);
+        if (mealsUnderTheTable.isEmpty()) throw new NoFoodException("No food under the table");
+        return mealsUnderTheTable.get(0);
     }
 
+    public void removeMealOnTheTable (Meal m)
+    {
+        mealsOnTheTable.remove(m);
+    }
+
+    public void removeMealUnderTheTable (Meal m)
+    {
+        mealsUnderTheTable.remove(m);
+    }
+
+    /*
+     * this methid is used by the kid to throw the food
+     * undert table if he doesn't like it
+     */
+    public void throwMealUnderTheTable (Meal m)
+    {
+        mealsOnTheTable.remove(m);
+        mealsUnderTheTable.add(m);
+    }
+
+    /*
+     * Checks if there's somethind undert the table, this method is used by the dog
+     */
+    public boolean isMealUnderTheTablePresent ()
+    {
+        if (mealsUnderTheTable.isEmpty()) return false;
+        return true;
+    }
+
+    /*
+     * to string
+     */
     @Override
     public String toString ()
     {
         String res =  super.toString() + "\n";
-        res += "Meals: ";
-        for (int i = 0; i < meals.size(); i++)
+        res += "Meals on the table: ";
+        for (int i = 0; i < mealsOnTheTable.size(); i++)
         {
-            res += meals.get(i).getName();
-            if (i < meals.size() - 1) res +=  ", ";
+            res += mealsOnTheTable.get(i).getName();
+            if (i < mealsOnTheTable.size() - 1) res +=  ", ";
+        }
+        res += "\nMeals under the table: ";
+        for (int i = 0; i < mealsUnderTheTable.size(); i++)
+        {
+            res += mealsUnderTheTable.get(i).getName();
+            if (i < mealsUnderTheTable.size() - 1) res +=  ", ";
         }
         return res;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(this.meals, this.name);
+        return Objects.hash(this.mealsOnTheTable, this.mealsUnderTheTable, this.name);
     }
 
     @Override
     public boolean equals(java.lang.Object obj) {
-        return super.equals(obj) && this.meals.equals(((Table)obj).meals);
+        return super.equals(obj) && this.mealsOnTheTable.equals(((Table)obj).mealsOnTheTable) && this.mealsUnderTheTable.equals(((Table)obj).mealsUnderTheTable);
     }
 }

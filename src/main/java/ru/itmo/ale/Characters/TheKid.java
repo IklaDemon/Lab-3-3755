@@ -74,7 +74,7 @@ public final class TheKid extends Person
         if (this.currentLocation instanceof DiningRoom)
         {
             dr = (DiningRoom) this.currentLocation;
-            dr.getUnderTable().addMeal(meal);
+            dr.getTable().throwMealUnderTheTable(meal);
             System.out.println(this.name + " throws under the table " + meal.getName());
         }
         else

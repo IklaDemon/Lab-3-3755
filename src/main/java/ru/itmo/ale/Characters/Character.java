@@ -49,7 +49,7 @@ public abstract class Character implements Emotions, Eater
         if (this.currentLocation instanceof DiningRoom)
         {
             System.out.println(this.name + " eats " + meal.getName());
-            ((DiningRoom)this.currentLocation).getTable().removeMeal(meal);
+            ((DiningRoom)this.currentLocation).getTable().removeMealOnTheTable(meal);
             return true;
         }
         else

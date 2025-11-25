@@ -23,10 +23,10 @@ public final class Bimbo extends Dog
     public boolean eats(Meal meal)
     {
         if (this.currentLocation instanceof DiningRoom)
-            if (((DiningRoom)this.currentLocation).getUnderTable().isMealPresent())
+            if (((DiningRoom)this.currentLocation).getTable().isMealUnderTheTablePresent())
             {
                 System.out.println(this.getName() + " eats " + meal.getName());
-                ((DiningRoom)this.currentLocation).getUnderTable().removeMeal(meal);;
+                ((DiningRoom)this.currentLocation).getTable().removeMealUnderTheTable(meal);
                 /*
                 for (Meal m : ((DiningRoom)currentLocation).getUnderTable().getMeals())
                 {

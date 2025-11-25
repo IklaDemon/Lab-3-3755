@@ -16,6 +16,7 @@ import ru.itmo.ale.Locations.Roof;
 import ru.itmo.ale.Objects.CabbageRoll;
 import ru.itmo.ale.Objects.Hamburger;
 import ru.itmo.ale.Objects.Meal;
+import ru.itmo.ale.Record.Actors;
 import ru.itmo.ale.Characters.Dad;
 import ru.itmo.ale.Characters.Karlsson;
 import ru.itmo.ale.Characters.Bosse;
@@ -54,13 +55,6 @@ public class Runner
 
         // characters
         Actors actors = new Actors(new TheKid(r), new Karlsson(r), new Mom(r), new Dad(r), new Bosse(r), new Bethan(r), new Bimbo(r));
-        /*TheKid theKid = new TheKid (r);
-        //Karlsson karlsson = new Karlsson (gp);
-        Mom mom = new Mom (gp);
-        Dad dad = new Dad (gp);
-        Bosse bosse = new Bosse (gp);
-        Bethan bethan = new Bethan (gp);
-        Bimbo goodBoy = new Bimbo (gp);*/
 
         /*
          * start of the story
@@ -92,19 +86,19 @@ public class Runner
         // nextInt will generate integers from: [0; 10)
         if (random_generator.nextInt(10) < 5)
         {
-            dr.getTable().addMeal(new Hamburger());
-            dr.getTable().addMeal(new Hamburger());
-            dr.getTable().addMeal(new Hamburger());
-            dr.getTable().addMeal(new Hamburger());
-            dr.getTable().addMeal(new Hamburger());
+            dr.getTable().addMealOnTheTable(new Hamburger());
+            dr.getTable().addMealOnTheTable(new Hamburger());
+            dr.getTable().addMealOnTheTable(new Hamburger());
+            dr.getTable().addMealOnTheTable(new Hamburger());
+            dr.getTable().addMealOnTheTable(new Hamburger());
         }
         else
         {
-            dr.getTable().addMeal(new CabbageRoll());
-            dr.getTable().addMeal(new CabbageRoll());
-            dr.getTable().addMeal(new CabbageRoll());
-            dr.getTable().addMeal(new CabbageRoll());
-            dr.getTable().addMeal(new CabbageRoll());
+            dr.getTable().addMealOnTheTable(new CabbageRoll());
+            dr.getTable().addMealOnTheTable(new CabbageRoll());
+            dr.getTable().addMealOnTheTable(new CabbageRoll());
+            dr.getTable().addMealOnTheTable(new CabbageRoll());
+            dr.getTable().addMealOnTheTable(new CabbageRoll());
         }
 
         actors.mom().speaks("Everyone!, is time to eat!");
@@ -120,7 +114,7 @@ public class Runner
 
         try
         {
-            System.out.println("For dinner there was: " + dr.getTable().getMeal().getName());
+            System.out.println("For dinner there was: " + dr.getTable().getMealOnTheTable().getName());
         }
         catch (NoFoodException e)
         {
@@ -130,7 +124,7 @@ public class Runner
 
         try
         {
-            if (actors.theKid().eats(dr.getTable().getMeal()))
+            if (actors.theKid().eats(dr.getTable().getMealOnTheTable()))
             {
                 if (actors.theKid().tellSecret())
                 {
@@ -150,7 +144,7 @@ public class Runner
 
         try
         {
-            Meal m = dr.getUnderTable().getMeal();
+            Meal m = dr.getTable().getMealUndertTheTable();
             if (actors.bimbo().eats(m))
             {
                 actors.bimbo().setMood(Emotion.HAPPY, "He ate " + m.getName());
