@@ -163,5 +163,6 @@ public class Runner
         }
 
         logger.close();
+        scr.close();
     }    
 }
