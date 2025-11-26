@@ -3,30 +3,30 @@
 # Text of the lab
 
 А о том, что он всего несколько минут назад вернулся с крыши, он просто умолчал.<br>
-And he simply kept silent about the fact that he had returned from the roof just a few minutes ago.<br>
+*And he simply kept silent about the fact that he had returned from the roof just a few minutes ago.*<br>
 Конечно, мама очень умная и почти все понимает, но поймет ли она, что ему обязательно нужно было лезть на крышу, -- в этом Малыш все же не был уверен.<br>
-Of course, Mom was very smart and understood almost everything, but whether she would understand that he absolutely had to climb onto the roof - of that "the Kid" was still not sure.<br>
+*Of course, Mom was very smart and understood almost everything, but whether she would understand that he absolutely had to climb onto the roof - of that "the Kid" was still not sure.*<br>
 Поэтому он решил ничего не говорить о появлении Карлсона
-So he decided to say nothing about Karlsson's appearance.<br>
+*So he decided to say nothing about Karlsson's appearance.*<br>
 <br>
 Во всяком случае, не сейчас.<br>
-In any case, not now.<br>
+*In any case, not now.*<br>
 Во всяком случае, не раньше, чем соберется вся семья.<br>
-In any case, not before the whole family gathered.<br>
+*In any case, not before the whole family gathered.*<br>
 Он преподнесет этот роскошный сюрприз за обедом.<br>
-He would present this luxurious surprise at dinner.<br>
+*He would present this luxurious surprise at dinner.*<br>
 К тому же мама показалась ему какой-то невеселой.<br>
-Besides, Mom seemed somehow sad to him.<br>
+*Besides, Mom seemed somehow sad to him.*<br>
 На лбу, между бровями, залегла складка, которой там быть не должно, и Малыш долго ломал себе голову, откуда она взялась.<br>
-A crease had appeared on her forehead, between her eyebrows, where it shouldn't be, and for a long time the Kid puzzled over where it came from.<br>
+*A crease had appeared on her forehead, between her eyebrows, where it shouldn't be, and for a long time the Kid puzzled over where it came from.*<br>
 Наконец собралась вся семья, и тогда мама позвала всех обедать; все вместе сели за стол: и мама, и папа, и Боссе, и Бетан, и Малыш.<br>
-Finally, the whole family was assembled, and then Mom called everyone to dinner; everyone sat down at the table together: Mom, Dad, Bosse, Bethan, and the Kid.<br>
+*Finally, the whole family was assembled, and then Mom called everyone to dinner; everyone sat down at the table together: Mom, Dad, Bosse, Bethan, and the Kid.*<br>
 На обед были голубцы -- опять капуста! А Малыш любил только то, что не полезно.<br>
-For dinner there were cabbage rolls - cabbage again! And the Kid only liked things that were unhealthy.<br>
+*For dinner there were cabbage rolls - cabbage again! And the Kid only liked things that were unhealthy.*<br>
 Но под столом у его ног лежал Бимбо, который ел все без разбору.<br>
-But under the table at his feet lay Bimbo, who ate everything indiscriminately.<br>
+*But under the table at his feet lay Bimbo, who ate everything indiscriminately.*<br>
 Малыш развернул голубец, скомкал капустный лист и тихонько швырнул его на пол, для Бимбо.<br>
-The kid unrolled the cabbage roll, crumpled the cabbage leaf and quietly threw it on the floor for Bimbo.<br>
+*The kid unrolled the cabbage roll, crumpled the cabbage leaf and quietly threw it on the floor for Bimbo.*<br>
 
 **Scene:**<br>
 1. Everyone appears in their respective place.<br>

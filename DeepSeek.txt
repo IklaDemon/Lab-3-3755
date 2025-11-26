@@ -123,13 +123,8 @@ public abstract class Character implements Emotions, Eater {
 
 
 1. Immutabilità e sicurezza
-Rimosso il setter per name: Il nome di un personaggio dovrebbe essere immutabile dopo la creazione
 Aggiunti controlli di null: Objects.requireNonNull() per parametri critici
 Campi private: Incapsulamento migliore rispetto a protected
-2. Miglioramenti della logica
-Corretto il metodo eats(): Ora restituisce false quando non può mangiare (prima restituiva sempre true)
-Refactoring del casting: Variabile locale esplicita per DiningRoom invece di casting ripetuto
-Corretto typo: divideCabaggeRoll → divideCabbageRoll
 3. Miglioramenti del codice
 Costanti per stringhe: Eliminazione di magic strings
 Formattazione migliorata: String.format() in toString()
