@@ -122,6 +122,7 @@ public abstract class Character implements Emotions, Eater {
 }
 
 
+/*
 1. Immutabilità e sicurezza
 Aggiunti controlli di null: Objects.requireNonNull() per parametri critici
 Campi private: Incapsulamento migliore rispetto a protected
@@ -137,3 +138,4 @@ Minore ripetizione di codice
 Nomi parametri più chiari: l → location, c → cabbageRoll
 Struttura più coerente: Ordine logico dei metodi
 Documentazione implicita: Codice più auto-esplicativo
+*/

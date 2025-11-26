@@ -1,5 +1,9 @@
 package ru.itmo.ale.Objects;
 
+/*
+ * this class can be an ENUM
+ */
+
 public class Ingredient extends Object
 {
     public Ingredient (String name)
