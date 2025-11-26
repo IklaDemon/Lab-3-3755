@@ -31,11 +31,11 @@
 **Scene:**<br>
 1. Everyone appears in their respective place.<br>
 2. TheKid moves to the GeneralPlace.<br>
-3. TheKid thinks decides to tell the secret or not.<br>
+3. TheKid thinks about telling the secret or not.<br>
 4. Mom reacts based on that.<br>
 5. The whole family gathers in the table.<br>
-6. Food appears in the table(maybe veggies or maybe trash food).<br>
-7. TheKid (Depending on the type of food) throwUnderTable(Meal) (or not) underTable and if he likes the food he will tell the secret.<br>
+6. Food appears in the table (maybe veggies or maybe trash food).<br>
+7. TheKid (Depending on the type of food) throwUnderTable(Meal) underTable and if he likes the food he will tell the secret.<br>
 8. Bimbo eats (or not) the Meal -> mood changes accordingly (Happy/sad).<br>
 
 **Translation to Russian:**<br>
