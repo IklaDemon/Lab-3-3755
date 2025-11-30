@@ -4,9 +4,7 @@ import java.io.PrintStream;
 import java.util.Random;
 import java.util.Scanner;
 
-import ru.itmo.ale.Characters.Bethan;
 import ru.itmo.ale.Characters.Bimbo;
-//import ru.itmo.ale.Characters.Karlsson;
 import ru.itmo.ale.Characters.TheKid;
 import ru.itmo.ale.Enums.Emotion;
 import ru.itmo.ale.Exceptions.NoFoodException;
@@ -14,13 +12,11 @@ import ru.itmo.ale.Locations.DiningRoom;
 import ru.itmo.ale.Locations.GeneralPlace;
 import ru.itmo.ale.Locations.Roof;
 import ru.itmo.ale.Objects.CabbageRoll;
-import ru.itmo.ale.Objects.Hamburger;
+import ru.itmo.ale.Objects.Ingredient;
 import ru.itmo.ale.Objects.Meal;
 import ru.itmo.ale.Record.Actors;
-import ru.itmo.ale.Characters.Dad;
-import ru.itmo.ale.Characters.Karlsson;
-import ru.itmo.ale.Characters.Bosse;
 import ru.itmo.ale.Characters.Mom;
+import ru.itmo.ale.Characters.Person;
 
 public class Runner
 {
@@ -54,14 +50,18 @@ public class Runner
         Roof r = new Roof ();
 
         // characters
-        Actors actors = new Actors(new TheKid(r), new Karlsson(r), new Mom(r), new Dad(r), new Bosse(r), new Bethan(r), new Bimbo(r));
+        Person bethan = new Person("Bethan", gp);
+        Person bosse = new Person("Bosse", gp);
+        Person dad = new Person("Dad", gp);
+        Person karlsson = new Person("Karlsson", gp);
+        Actors actors = new Actors(new TheKid(r), karlsson, new Mom(gp), dad, bosse, bethan, new Bimbo(gp));
 
         /*
          * start of the story
          */
 
         actors.theKid().moveTo(gp);
-        actors.theKid().thinks("I will stay quite");
+        actors.theKid().thinks("I will remain silent");
         actors.mom().thinks("I wont say anything about my kid coming from the roof");
         actors.theKid().thinks("I absolutely had to be in that roof");
         scr.nextLine();
@@ -88,11 +88,19 @@ public class Runner
         // 50% chance of the food being Hamburger or Cabbage Roll
         if (random_generator.nextInt(10) < 5)
         {
-            dr.getTable().addMealOnTheTable(new Hamburger());
-            dr.getTable().addMealOnTheTable(new Hamburger());
-            dr.getTable().addMealOnTheTable(new Hamburger());
-            dr.getTable().addMealOnTheTable(new Hamburger());
-            dr.getTable().addMealOnTheTable(new Hamburger());
+            Meal m = new Meal("Hamburger", false);
+            m.addIngredient(new Ingredient("Bread"));
+            m.addIngredient(new Ingredient("Meat"));
+            m.addIngredient(new Ingredient("Ketchup"));
+            m.addIngredient(new Ingredient("Salad"));
+            m.addIngredient(new Ingredient("Cheese"));
+            m.addIngredient(new Ingredient("Bacon"));
+
+            dr.getTable().addMealOnTheTable(m);
+            dr.getTable().addMealOnTheTable(m.copy());
+            dr.getTable().addMealOnTheTable(m.copy());
+            dr.getTable().addMealOnTheTable(m.copy());
+            dr.getTable().addMealOnTheTable(m.copy());
         }
         else
         {

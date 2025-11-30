@@ -7,15 +7,14 @@ import ru.itmo.ale.Interfaces.Emotions;
 import ru.itmo.ale.Interfaces.Eater;
 import ru.itmo.ale.Locations.DiningRoom;
 import ru.itmo.ale.Locations.Location;
-import ru.itmo.ale.Objects.CabbageRoll;
 import ru.itmo.ale.Objects.Meal;
 
 public abstract class Character implements Emotions, Eater
 {
-    protected String name;
-    protected Emotion mood;
-    protected boolean hasCrease;
-    protected Location currentLocation;
+    private String name;
+    private Emotion mood;
+    private boolean hasCrease;
+    private Location currentLocation;
 
     /*
      * constructor
@@ -35,11 +34,21 @@ public abstract class Character implements Emotions, Eater
     public void setName (String name) { this.name = name; }
     public String getName () { return this.name; }
 
+    public Location getCurrentLocation() {
+        return currentLocation;
+    }
+
+    public void setCurrentLocation(Location currentLocation) {
+        this.currentLocation = currentLocation;
+    }
+
     /*
      * the track of the position of every character is kept in
      * both the Location class and the Character class
      */
     public abstract void moveTo (Location l);
+
+    public abstract void speaks (String s);
 
     /*
      * method implemented from the Eater interface
@@ -57,17 +66,18 @@ public abstract class Character implements Emotions, Eater
             System.out.println(this.name + " can't eat because he is not in the Dining room ");
             return false;
         }
-
     }
 
     /*
      * method implemented from the Eater interface
+     * not anymore, the method shoul be inheritated only by
+     * TheKid or Person
      */
-    public Meal divideCabaggeRoll (CabbageRoll c)
+    /*public Meal divideCabaggeRoll (CabbageRoll c)
     {
         System.out.println(this.name + " unrolls " + c.getName());
         return c.unrollCabbage();
-    }
+    }*/
 
     /*
      * method implemented from Emotion Interface

@@ -23,7 +23,7 @@ public final class TheKid extends Person
      */
     public void climbTo (Roof r)
     {
-        System.out.println (this.name + " climbed to " + r.getName());
+        System.out.println (this.getName() + " climbed to " + r.getName());
         this.moveTo (r);
     }
 
@@ -73,11 +73,11 @@ public final class TheKid extends Person
     public void throwUnderTable (Meal meal)
     {
         DiningRoom dr;
-        if (this.currentLocation instanceof DiningRoom)
+        if (this.getCurrentLocation() instanceof DiningRoom)
         {
-            dr = (DiningRoom) this.currentLocation;
+            dr = (DiningRoom) this.getCurrentLocation();
             dr.getTable().throwMealUnderTheTable(meal);
-            System.out.println(this.name + " throws under the table " + meal.getName());
+            System.out.println(this.getName() + " throws under the table " + meal.getName());
         }
         else
         {

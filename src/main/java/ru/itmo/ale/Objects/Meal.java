@@ -38,6 +38,14 @@ public class Meal extends Object
         return ingredients;
     }
 
+    public Meal copy ()
+    {
+        Meal m = new Meal(this.name, this.isHealthy);
+        for (Ingredient ingredient : ingredients)
+            m.addIngredient(ingredient);
+        return m;   
+    }
+
     /*
      * to string
      */

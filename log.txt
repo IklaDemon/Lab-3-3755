@@ -27,3 +27,36 @@ For dinner there was: Hamburger
 The Kid likes Hamburger
 No food under the table [Overrided method]
 Bimbo changes to SAD because He didn't eat 
+Hello
+Hello
+The Kid walks to General Place
+The Kid thinks: I will remain silent
+Mom thinks: I wont say anything about my kid coming from the roof
+The Kid thinks: I absolutely had to be in that roof
+The Kid thinks: I won't say anything about karlsson appareance in the roof before the family gathers
+Mom changes to SAD because The Kid is hiding something
+A crease has appeared in Mom
+Family is assembled
+Mom says: Everyone!, is time to eat!
+Mom walks to Dining Room
+Mom sat in the table
+Dad walks to Dining Room
+Dad sat in the table
+Bosse walks to Dining Room
+Bosse sat in the table
+Bethan walks to Dining Room
+Bethan sat in the table
+The Kid walks to Dining Room
+The Kid sat in the table
+Bimbo runs to Dining Room
+For dinner there was: Hamburger
+The Kid likes Hamburger
+The Kid says: I was in the roof with Karlsson
+Mom changes to ANGRY because The kid was honest too late
+Mom still has the crease
+Dad changes to ANGRY because The kid did something irresponsible for his safety
+Bosse changes to NORMAL because Bosse does not care
+Bethan changes to NORMAL because Bethan does not care
+The Kid changes to SAD because everyone is angry at him
+No food under the table [Overrided method]
+Bimbo changes to SAD because He didn't eat 

@@ -1,9 +1,12 @@
 package ru.itmo.ale.Characters;
 
+import ru.itmo.ale.Interfaces.DivideCabbageRoll;
 import ru.itmo.ale.Locations.DiningRoom;
 import ru.itmo.ale.Locations.Location;
+import ru.itmo.ale.Objects.CabbageRoll;
+import ru.itmo.ale.Objects.Meal;
 
-public abstract class Person extends Character
+public class Person extends Character implements DivideCabbageRoll
 {
     /*
      * constructor
@@ -16,22 +19,28 @@ public abstract class Person extends Character
     public void seatsToTable(DiningRoom dr)
     {
         this.moveTo(dr);
-        System.out.println(this.name + " sat in the table");
+        System.out.println(this.getName() + " sat in the table");
     }
 
     @Override
     public void moveTo(Location l)
     {
-        if (l != currentLocation)
+        if (l != this.getCurrentLocation())
         {
-            System.out.println(this.name + " walks to " + l.getName());
-            if (currentLocation != null)
+            System.out.println(this.getName() + " walks to " + l.getName());
+            if (this.getCurrentLocation() != null)
             {
-                currentLocation.removeCharacter(this);
+                this.getCurrentLocation().removeCharacter(this);
             }
-            this.currentLocation = l;
+            this.setCurrentLocation(l);
             l.addCharacter(this);
         }
+    }
+
+    public Meal divideCabaggeRoll (CabbageRoll c)
+    {
+        System.out.println(this.getName() + " unrolls " + c.getName());
+        return c.unrollCabbage();
     }
 
     /*
@@ -39,7 +48,7 @@ public abstract class Person extends Character
      */
     public void speaks (String s)
     {
-        System.out.println(this.name + " says: " + s);
+        System.out.println(this.getName() + " says: " + s);
     }
 
     /*
@@ -47,7 +56,7 @@ public abstract class Person extends Character
      */
     public void thinks (String s)
     {
-        System.out.println(this.name + " thinks: " + s);
+        System.out.println(this.getName() + " thinks: " + s);
     }
 
     /*

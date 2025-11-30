@@ -1,6 +1,5 @@
 package ru.itmo.ale.Interfaces;
 
-import ru.itmo.ale.Objects.CabbageRoll;
 import ru.itmo.ale.Objects.Meal;
 
 public interface Eater
@@ -11,9 +10,4 @@ public interface Eater
      * or "false" otherwise.
      */
     public boolean eats (Meal meal);
-
-    /*
-     * action that should be performed by "the kid"
-     */
-    public Meal divideCabaggeRoll (CabbageRoll c);
 }

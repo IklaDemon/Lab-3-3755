@@ -15,14 +15,14 @@ public abstract class Dog extends Character
     @Override
     public void moveTo(Location l)
     {
-        if (l != currentLocation)
+        if (l != this.getCurrentLocation())
         {
-            System.out.println(this.name + " runs to " + l.getName());
-            if (currentLocation != null)
+            System.out.println(this.getName() + " runs to " + l.getName());
+            if (this.getCurrentLocation() != null)
             {
-                currentLocation.removeCharacter(this);
+                this.getCurrentLocation().removeCharacter(this);
             }
-            this.currentLocation = l;
+            this.setCurrentLocation(l);
             l.addCharacter(this);
         }
     }
@@ -30,7 +30,12 @@ public abstract class Dog extends Character
     /*
      * method to bark
      */
-    public void barks ()
+    /*public void barks ()
+    {
+        System.out.println(this.getName() + " barks!");
+    }*/
+
+    public void speaks (String s)
     {
         System.out.println(this.getName() + " barks!");
     }
