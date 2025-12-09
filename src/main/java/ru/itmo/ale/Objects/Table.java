@@ -20,15 +20,8 @@ public final class Table extends Object
     public ArrayList<Meal> getMealsOnTheTable () { return mealsOnTheTable; }
     public ArrayList<Meal> getMealsUnderTheTable () { return mealsUnderTheTable; }
 
-    public void addMealOnTheTable (Meal m)
-    {
-        mealsOnTheTable.add(m);
-    }
-
-    public void addMealUnderTheTable (Meal m)
-    {
-        mealsUnderTheTable.add(m);
-    }
+    public void addMealOnTheTable (Meal m) { mealsOnTheTable.add(m); }
+    public void addMealUnderTheTable (Meal m) { mealsUnderTheTable.add(m); }
 
     public Meal getMealOnTheTable () throws NoFoodException
     {

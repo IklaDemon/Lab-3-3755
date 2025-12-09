@@ -136,13 +136,43 @@ public abstract class Character implements Emotions, Eater {
 }
 
 /*
-cosa ho migliorato (e perché)
-Null-safety e validazioni: uso Objects.requireNonNull in punti chiave (costruttore, setter, metodi pubblici) per evitare NPE “silenziosi”.
-Incapsulamento: i campi sono private. Espongo getter/setter dove serve e un protected setCurrentLocation utile alle sottoclassi in moveTo.
-Ritorni coerenti: in eats ora il return è informativo: true solo se il Meal è effettivamente rimosso dal tavolo. Nel ramo “non sono in sala da pranzo” ritorna false (prima ritornava true, bug logico).
-Messaggi e typo: corretti i testi (“disappeared”) e l’inglese; gestito gentilmente il pronome nel messaggio. Sistemato il nome del metodo in divideCabbageRoll (era “Cabagge”).
-setCrease reso deterministico: prima non “set-tava”, ma faceva un po’ di branching con early-return e side-effect inconsistenti. Ora calcola lo stato atteso dalla mood e aggiorna solo se cambia, loggando il risultato. Mantengo il nome per compatibilità.
-toString robusto: non va in NPE se la location è null (per sicurezza).
-equals/hashCode: stessi campi della tua versione, ma con Objects.equals anche per location così è null-safe. (Nota: includere location e mood nell’identità è una scelta; se un “personaggio” dovrebbe essere identificato solo dal nome, potresti semplificare basandoti su name e getClass()).
-Formattazione: uso String.format per messaggi più puliti e consistenti.
+ChatGPT:
+
+Null-safety и проверки:
+Я добавил вызовы Objects.requireNonNull в ключевых местах (конструктор, сеттеры, публичные методы), чтобы предотвратить «тихие» NullPointerException. Это делает класс более надёжным — если кто-то случайно передаст null, программа сразу сообщит об ошибке с понятным сообщением.
+
+Сообщения и опечатки:
+Исправлены тексты сообщений ("disappeared", вместо "dissapeared") и грамматика английских фраз.
+Также добавлено корректное обращение к персонажу в сообщениях (например, чтобы фраза звучала естественнее).
+Название метода исправлено на divideCabbageRoll (в оригинале было с опечаткой — “Cabagge”).
+
+Безопасный toString:
+Метод toString() теперь не выбросит NullPointerException, если currentLocation окажется null — вместо этого выведется “<nowhere>”.
+
+equals / hashCode:
+Используются те же поля, что и в твоей версии, но теперь через Objects.equals — это защищает от NullPointerException, если одно из полей равно null.
+
+Форматирование:
+Сообщения в консоли теперь формируются через String.format — это делает их чище, единообразнее и легче читаемыми. ChatGPT:
+
+TRANSLATION
+
+Null-safety and checks:
+I've added calls to Objects.requireNonNull in key places (constructor, setters, public methods) to prevent silent NullPointerExceptions. This makes the class more robust—if someone accidentally passes null, the program will immediately report the error with a clear message.
+
+Messages and typos:
+Message texts have been corrected ("disappeared" instead of "dissapeared") and the grammar of English phrases.
+Also, the correct character address in messages has been added (for example, to make the phrase sound more natural).
+The method name has been corrected to divideCabbageRoll (the original was misspelled as "Cabagge").
+
+Safe toString:
+The toString() method will no longer throw a NullPointerException if currentLocation is null—it will print "<nowhere>" instead.
+
+equals / hashCode:
+The same fields are used as in your version, but now via Objects.equals—this protects against NullPointerException if one of the fields is null.
+
+Formatting:
+Console messages are now generated using String.format—this makes them cleaner, more consistent, and easier to read.
+
+
 */

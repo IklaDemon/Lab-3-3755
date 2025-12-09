@@ -123,19 +123,47 @@ public abstract class Character implements Emotions, Eater {
 
 
 /*
-1. Immutabilità e sicurezza
-Aggiunti controlli di null: Objects.requireNonNull() per parametri critici
-Campi private: Incapsulamento migliore rispetto a protected
-3. Miglioramenti del codice
-Costanti per stringhe: Eliminazione di magic strings
-Formattazione migliorata: String.format() in toString()
-Logica semplificata: Rimozione di condizioni ridondanti
-Getter aggiuntivi: Per hasCrease e currentLocation
-4. Miglioramenti delle prestazioni
-HashCode ottimizzato: Ordine coerente con equals()
-Minore ripetizione di codice
-5. Miglioramenti della manutenibilità
-Nomi parametri più chiari: l → location, c → cabbageRoll
-Struttura più coerente: Ordine logico dei metodi
-Documentazione implicita: Codice più auto-esplicativo
+DeepSeek:
+
+1. Неизменяемость и безопасность
+Добавлены проверки на null: Objects.requireNonNull() для критических параметров
+Поля private: Улучшенная инкапсуляция по сравнению с protected
+
+3. Улучшения кода
+Константы для строк: Устранение "магических строк"
+Улучшенное форматирование: String.format() в toString()
+Упрощенная логика: Удаление избыточных условий
+Дополнительные геттеры: Для hasCrease и currentLocation
+
+4. Улучшения производительности
+Оптимизированный HashCode: Согласованный порядок с equals()
+Меньше повторения кода
+
+5. Улучшения сопровождаемости
+Более понятные имена параметров: l → location, c → cabbageRoll
+Более согласованная структура: Логический порядок методов
+Неявная документация: Более самодокументируемый код
+
+TRANSLATION
+
+DeepSik:
+
+1. Immutability and Safety
+Requests for null: Objects.requireNonNull() for more information.
+Private Messages: Improved encapsulation over protected
+
+3. Code Improvements
+Specification: "magic strings"
+Translate: String.format() to toString()
+More Details: Removing Redundant Conditions
+Overview: For hasCrease and currentLocation
+
+4. Performance Improvements
+Optimized HashCode: Consistent ordering with equals()
+Less code repetition
+
+5. Maintainability Improvements
+Search: l → location, c → cabbage roll
+More consistent structure: Logical ordering methods.
+Reference: More self-documenting code
 */
