@@ -26,11 +26,12 @@ public class Object
     }
 
     @Override
-    public boolean equals(java.lang.Object obj) {
+    public boolean equals (java.lang.Object obj)
+    {
         if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
+        if (!(obj instanceof Object)) return false;
         Object o = (Object) obj;
-        return name.equals(o);
+        return this.name.equals(o.getName());
     }
 
     @Override

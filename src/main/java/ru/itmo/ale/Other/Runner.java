@@ -7,12 +7,11 @@ import java.util.Scanner;
 import ru.itmo.ale.Characters.Bimbo;
 import ru.itmo.ale.Characters.TheKid;
 import ru.itmo.ale.Enums.Emotion;
+import ru.itmo.ale.Enums.Ingredients;
 import ru.itmo.ale.Exceptions.NoFoodException;
 import ru.itmo.ale.Locations.DiningRoom;
-import ru.itmo.ale.Locations.GeneralPlace;
-import ru.itmo.ale.Locations.Roof;
+import ru.itmo.ale.Locations.Location;
 import ru.itmo.ale.Objects.CabbageRoll;
-import ru.itmo.ale.Objects.Ingredient;
 import ru.itmo.ale.Objects.Meal;
 import ru.itmo.ale.Record.Actors;
 import ru.itmo.ale.Characters.Mom;
@@ -46,8 +45,8 @@ public class Runner
 
         // locations
         DiningRoom dr = new DiningRoom ();
-        GeneralPlace gp = new GeneralPlace();
-        Roof r = new Roof ();
+        Location gp = new Location("GeneralPlace");
+        Location r = new Location ("Roof");
 
         // characters
         Person bethan = new Person("Bethan", gp);
@@ -89,12 +88,12 @@ public class Runner
         if (random_generator.nextInt(10) < 5)
         {
             Meal m = new Meal("Hamburger", false);
-            m.addIngredient(new Ingredient("Bread"));
-            m.addIngredient(new Ingredient("Meat"));
-            m.addIngredient(new Ingredient("Ketchup"));
-            m.addIngredient(new Ingredient("Salad"));
-            m.addIngredient(new Ingredient("Cheese"));
-            m.addIngredient(new Ingredient("Bacon"));
+            m.addIngredient(Ingredients.BREAD);
+            m.addIngredient(Ingredients.MEAT);
+            m.addIngredient(Ingredients.KETCHUP);
+            m.addIngredient(Ingredients.SALAD);
+            m.addIngredient(Ingredients.CHEESE);
+            m.addIngredient(Ingredients.BACON);
 
             dr.getTable().addMealOnTheTable(m);
             dr.getTable().addMealOnTheTable(m.copy());

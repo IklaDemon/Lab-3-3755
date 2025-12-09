@@ -28,19 +28,12 @@ public abstract class Character implements Emotions, Eater
         l.addCharacter(this);
     }
 
-    /*
-     * name setter and getter
-     */
+    // name setter and getter
     public void setName (String name) { this.name = name; }
     public String getName () { return this.name; }
-
-    public Location getCurrentLocation() {
-        return currentLocation;
-    }
-
-    public void setCurrentLocation(Location currentLocation) {
-        this.currentLocation = currentLocation;
-    }
+    // Location setter and getter
+    public void setCurrentLocation(Location currentLocation) { this.currentLocation = currentLocation; }
+    public Location getCurrentLocation() { return currentLocation; }
 
     /*
      * the track of the position of every character is kept in
@@ -48,6 +41,9 @@ public abstract class Character implements Emotions, Eater
      */
     public abstract void moveTo (Location l);
 
+    /*
+     * absytact speaks method, should be implemented by dog and person
+     */
     public abstract void speaks (String s);
 
     /*
@@ -69,18 +65,7 @@ public abstract class Character implements Emotions, Eater
     }
 
     /*
-     * method implemented from the Eater interface
-     * not anymore, the method shoul be inheritated only by
-     * TheKid or Person
-     */
-    /*public Meal divideCabaggeRoll (CabbageRoll c)
-    {
-        System.out.println(this.name + " unrolls " + c.getName());
-        return c.unrollCabbage();
-    }*/
-
-    /*
-     * method implemented from Emotion Interface
+     * methods implemented from Emotion Interface
      */
     public void setMood (Emotion emotion, String reason)
     {
@@ -88,17 +73,8 @@ public abstract class Character implements Emotions, Eater
         System.out.println (this.name + " changes to " + emotion + " because " + reason);
     }
 
-    /*
-     * method implemented from Emotion Interface
-     */
-    public Emotion getMood ()
-    {
-        return this.mood;
-    }
+    public Emotion getMood () { return this.mood; }
 
-    /*
-     * method implemented from Emotion Interface
-     */
     public void setCrease ()
     {
         if (this.hasCrease == true) System.out.println(this.getName() + " still has the crease");
@@ -118,9 +94,6 @@ public abstract class Character implements Emotions, Eater
         }
     }
 
-    /*
-     * to string
-     */
     public String toString ()
     {
         return "Name: " + this.name + ", Mood: " + this.mood + ", has crease: " + this.hasCrease + ", location: " + currentLocation.getName();
@@ -130,18 +103,14 @@ public abstract class Character implements Emotions, Eater
     public boolean equals(Object obj)
     {
         if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        Character character = (Character) obj;
-        return this.hasCrease == character.hasCrease && Objects.equals(this.name, character.name) && this.currentLocation.equals(character.currentLocation) && this.mood == character.mood;
+        if (!(obj instanceof Character)) return false;
+        Character ch = (Character) obj;
+        return Objects.equals(this.name, ch.name) && this.mood == ch.mood && this.hasCrease == ch.hasCrease && Objects.equals(this.currentLocation, ch.currentLocation);
     }
 
-    /*@Override
-    public int hashCode() {
-        return Objects.hash(this.currentLocation, this.hasCrease, this.mood, this.name);
-    }*/
-
     @Override
-    public int hashCode() {
-        return Objects.hash(this.hasCrease, this.name, this.currentLocation, this.mood);
+    public int hashCode()
+    {
+        return Objects.hash(name, mood, hasCrease, currentLocation);
     }
 }

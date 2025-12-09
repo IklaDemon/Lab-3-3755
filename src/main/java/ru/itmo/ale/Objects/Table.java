@@ -5,10 +5,10 @@ import java.util.Objects;
 
 import ru.itmo.ale.Exceptions.NoFoodException;
 
-public class Table extends Object
+public final class Table extends Object
 {
-    protected ArrayList<Meal> mealsOnTheTable;
-    protected ArrayList<Meal> mealsUnderTheTable;
+    private ArrayList<Meal> mealsOnTheTable;
+    private ArrayList<Meal> mealsUnderTheTable;
 
     public Table ()
     {
@@ -94,12 +94,18 @@ public class Table extends Object
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(this.mealsOnTheTable, this.mealsUnderTheTable, this.name);
+    public boolean equals(java.lang.Object obj)
+    {
+        if (this == obj) return true;
+        if (!(obj instanceof Table)) return false;
+        if (!super.equals(obj)) return false;
+        Table t = (Table) obj;
+        return Objects.equals(this.mealsOnTheTable, t.mealsOnTheTable) && Objects.equals(this.mealsUnderTheTable, t.mealsUnderTheTable);
     }
 
     @Override
-    public boolean equals(java.lang.Object obj) {
-        return super.equals(obj) && this.mealsOnTheTable.equals(((Table)obj).mealsOnTheTable) && this.mealsUnderTheTable.equals(((Table)obj).mealsUnderTheTable);
+    public int hashCode()
+    {
+        return Objects.hash(super.hashCode(), this.mealsOnTheTable, this.mealsUnderTheTable);
     }
 }

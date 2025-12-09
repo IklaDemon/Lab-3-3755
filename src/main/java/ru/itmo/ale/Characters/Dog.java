@@ -12,6 +12,9 @@ public abstract class Dog extends Character
         super(s, l);
     }
 
+    /*
+     * method overrided to change the movement type to "runs to"
+     */
     @Override
     public void moveTo(Location l)
     {
@@ -27,35 +30,8 @@ public abstract class Dog extends Character
         }
     }
 
-    /*
-     * method to bark
-     */
-    /*public void barks ()
-    {
-        System.out.println(this.getName() + " barks!");
-    }*/
-
     public void speaks (String s)
     {
         System.out.println(this.getName() + " barks!");
-    }
-
-    /*
-     * to string
-     */
-    @Override
-    public String toString()
-    {
-        return super.toString();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
     }
 }

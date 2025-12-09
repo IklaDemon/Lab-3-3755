@@ -1,43 +1,29 @@
 package ru.itmo.ale.Objects;
 
-public class CabbageRoll extends Meal
+import ru.itmo.ale.Enums.Ingredients;
+
+public final class CabbageRoll extends Meal
 {
     public CabbageRoll ()
     {
         super("Cabbage Roll", true);
-        this.addIngredient(new Ingredient("Cabbage Leaf"));
-        this.addIngredient(new Ingredient("Rice"));
-        this.addIngredient(new Ingredient("Beaf"));
-        this.addIngredient(new Ingredient("Onion"));
-        this.addIngredient(new Ingredient("Onion"));
+        this.addIngredient(Ingredients.CABBAGE_LEAF);
+        this.addIngredient(Ingredients.RICE);
+        this.addIngredient(Ingredients.BEAF);
+        this.addIngredient(Ingredients.ONION);
     }
 
     public Meal unrollCabbage ()
     {
         Meal cabbageLeaf = new Meal("Cabbage Leaf", true);
-        for (Ingredient ingredient : ingredients)
+        for (Ingredients ingredient : this.getIngredients())
         {
-            if (ingredient.getName() == "Cabbage Leaf")
+            if (ingredient == Ingredients.CABBAGE_LEAF)
             {
-                ingredients.remove(ingredient);
+                this.getIngredients().remove(ingredient);
                 break;
             }
         }
         return cabbageLeaf;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
-    }
-
-    @Override
-    public boolean equals(java.lang.Object obj) {
-        return super.equals(obj);
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
     }
 }

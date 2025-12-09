@@ -5,7 +5,7 @@ import java.util.Objects;
 
 import ru.itmo.ale.Characters.Character;
 
-public abstract class Location
+public class Location
 {
     private String name;
     private ArrayList<Character> characters;

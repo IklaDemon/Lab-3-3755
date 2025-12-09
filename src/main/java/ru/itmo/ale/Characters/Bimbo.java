@@ -27,12 +27,6 @@ public final class Bimbo extends Dog
             {
                 System.out.println(this.getName() + " eats " + meal.getName());
                 ((DiningRoom)this.getCurrentLocation()).getTable().removeMealUnderTheTable(meal);
-                /*
-                for (Meal m : ((DiningRoom)currentLocation).getUnderTable().getMeals())
-                {
-                    System.out.println(this.getName() + " eats " + m.getName());
-                }
-                ((DiningRoom)this.currentLocation).getUnderTable().removeAll();*/
                 return true;
             }
         else
@@ -40,23 +34,5 @@ public final class Bimbo extends Dog
             System.out.println(this.getName() + " is not in the dining room");
         }
         return false;
-    }
-
-    /*
-     * to string
-     */
-    @Override
-    public String toString() {
-        return super.toString();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
     }
 }

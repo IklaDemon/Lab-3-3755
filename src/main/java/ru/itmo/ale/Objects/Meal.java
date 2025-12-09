@@ -3,10 +3,12 @@ package ru.itmo.ale.Objects;
 import java.util.ArrayList;
 import java.util.Objects;
 
+import ru.itmo.ale.Enums.Ingredients;
+
 public class Meal extends Object
 {
-    protected boolean isHealthy;
-    protected ArrayList<Ingredient> ingredients;
+    private boolean isHealthy;
+    private ArrayList<Ingredients> ingredients;
 
     /*
      * constructor
@@ -15,7 +17,7 @@ public class Meal extends Object
     {
         super (n);
         this.isHealthy = isHealthy;
-        ingredients = new ArrayList<Ingredient>();
+        ingredients = new ArrayList<Ingredients>();
     }
 
     public boolean isHealthy ()
@@ -26,7 +28,7 @@ public class Meal extends Object
     /*
      * add ingredient
      */
-    public void addIngredient (Ingredient i)
+    public void addIngredient (Ingredients i)
     {
         this.ingredients.add(i);
     }
@@ -34,14 +36,14 @@ public class Meal extends Object
     /*
      * get all the ingredients in ArrayList
      */
-    public ArrayList<Ingredient> getIngredients() {
+    public ArrayList<Ingredients> getIngredients() {
         return ingredients;
     }
 
     public Meal copy ()
     {
         Meal m = new Meal(this.name, this.isHealthy);
-        for (Ingredient ingredient : ingredients)
+        for (Ingredients ingredient : ingredients)
             m.addIngredient(ingredient);
         return m;   
     }
@@ -54,25 +56,28 @@ public class Meal extends Object
     {
         String str = "Name of the meal: " + this.name;
         str += "\nIshealthy: " + this.isHealthy;
-        str += "Ingredients: ";
+        str += "\nIngredients: ";
         for (int i = 0; i < ingredients.size(); i++)
         {
-            str += ingredients.get(i).getName();
+            str += ingredients.get(i).name();
             if (i < ingredients.size() - 1) str +=  ", ";
         }
         return str;
     }
 
     @Override
-    public boolean equals(java.lang.Object obj) {
+    public boolean equals(java.lang.Object obj)
+    {
         if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
+        if (!(obj instanceof Meal)) return false;
+        if (!super.equals(obj)) return false;
         Meal m = (Meal) obj;
-        return this.isHealthy == m.isHealthy && this.ingredients.equals(m.ingredients) && super.equals(obj);
+        return this.isHealthy == m.isHealthy() && Objects.equals(this.ingredients, m.getIngredients());
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(this.name, this.isHealthy, this.ingredients);
+    public int hashCode()
+    {
+        return Objects.hash(super.hashCode(), this.isHealthy, this.ingredients);
     }
 }

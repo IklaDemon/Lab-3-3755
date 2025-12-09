@@ -4,8 +4,6 @@ import java.util.Objects;
 
 import ru.itmo.ale.Objects.Table;
 
-//import ru.itmo.ale.Classes.Location;
-
 public final class DiningRoom extends Location
 {
     protected Table table;
@@ -26,9 +24,6 @@ public final class DiningRoom extends Location
         return table;
     }
 
-    /*
-     * to string
-     */
     @Override
     public String toString()
     {
@@ -38,13 +33,18 @@ public final class DiningRoom extends Location
     }
 
     @Override
-    public boolean equals(Object obj) {
+    public boolean equals(Object obj)
+    {
+        if (this == obj) return true;
+        if (!(obj instanceof DiningRoom)) return false;
+        if (!super.equals(obj)) return false;
         DiningRoom dr = (DiningRoom) obj;
-        return super.equals(obj) && table.equals(dr.table);
+        return Objects.equals(this.table, dr.table);
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode()
+    {
         return Objects.hash(super.hashCode(), this.table);
     }
 }
