@@ -59,7 +59,7 @@ public final class TheKid extends Person
             System.out.println(this.getName() + ": Ugh, I don't like this food");
             if (m instanceof CabbageRoll)
             {
-                Meal cabbageLeaf = this.divideCabaggeRoll ((CabbageRoll) m);
+                Meal cabbageLeaf = this.divideCabbageRoll ((CabbageRoll) m);
                 this.throwUnderTable(cabbageLeaf);
             }
 

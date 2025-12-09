@@ -37,7 +37,7 @@ public class Person extends Character implements DivideCabbageRoll
         }
     }
 
-    public Meal divideCabaggeRoll (CabbageRoll c)
+    public Meal divideCabbageRoll (CabbageRoll c)
     {
         System.out.println(this.getName() + " unrolls " + c.getName());
         return c.unrollCabbage();

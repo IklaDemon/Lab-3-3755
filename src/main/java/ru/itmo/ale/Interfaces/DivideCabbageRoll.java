@@ -8,5 +8,5 @@ public interface DivideCabbageRoll
     /*
      * action that should be performed by "the kid"
      */
-    public Meal divideCabaggeRoll (CabbageRoll c);
+    public Meal divideCabbageRoll (CabbageRoll c);
 }
